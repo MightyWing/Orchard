@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{E9C9F120-07BA-4DFB-B9C3-3AFB9D44C9D5}"
 EndProject
@@ -279,6 +279,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orchard.Azure.Tests", "Orchard.Azure.Tests\Orchard.Azure.Tests.csproj", "{1CC62F45-E6FF-43D5-84BF-509A1085D994}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mighty.Shop", "Orchard.Web\Modules\Mighty.Shop\Mighty.Shop.csproj", "{FBC71540-A8E0-42DF-A666-423955376DB4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIM.LinqJs", "Orchard.Web\Modules\AIM.LinqJs\AIM.LinqJs.csproj", "{A190C7B0-C46C-4B25-995C-D5ED354F041B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orchard.Knockout", "Orchard.Web\Modules\Orchard.Knockout\Orchard.Knockout.csproj", "{1FE6AD59-F0E8-4122-B369-E23AE566C26A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -1126,6 +1130,26 @@ Global
 		{FBC71540-A8E0-42DF-A666-423955376DB4}.FxCop|Any CPU.Build.0 = Release|Any CPU
 		{FBC71540-A8E0-42DF-A666-423955376DB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FBC71540-A8E0-42DF-A666-423955376DB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A190C7B0-C46C-4B25-995C-D5ED354F041B}.CodeCoverage|Any CPU.ActiveCfg = Release|Any CPU
+		{A190C7B0-C46C-4B25-995C-D5ED354F041B}.CodeCoverage|Any CPU.Build.0 = Release|Any CPU
+		{A190C7B0-C46C-4B25-995C-D5ED354F041B}.Coverage|Any CPU.ActiveCfg = Release|Any CPU
+		{A190C7B0-C46C-4B25-995C-D5ED354F041B}.Coverage|Any CPU.Build.0 = Release|Any CPU
+		{A190C7B0-C46C-4B25-995C-D5ED354F041B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A190C7B0-C46C-4B25-995C-D5ED354F041B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A190C7B0-C46C-4B25-995C-D5ED354F041B}.FxCop|Any CPU.ActiveCfg = Release|Any CPU
+		{A190C7B0-C46C-4B25-995C-D5ED354F041B}.FxCop|Any CPU.Build.0 = Release|Any CPU
+		{A190C7B0-C46C-4B25-995C-D5ED354F041B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A190C7B0-C46C-4B25-995C-D5ED354F041B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FE6AD59-F0E8-4122-B369-E23AE566C26A}.CodeCoverage|Any CPU.ActiveCfg = Release|Any CPU
+		{1FE6AD59-F0E8-4122-B369-E23AE566C26A}.CodeCoverage|Any CPU.Build.0 = Release|Any CPU
+		{1FE6AD59-F0E8-4122-B369-E23AE566C26A}.Coverage|Any CPU.ActiveCfg = Release|Any CPU
+		{1FE6AD59-F0E8-4122-B369-E23AE566C26A}.Coverage|Any CPU.Build.0 = Release|Any CPU
+		{1FE6AD59-F0E8-4122-B369-E23AE566C26A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FE6AD59-F0E8-4122-B369-E23AE566C26A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FE6AD59-F0E8-4122-B369-E23AE566C26A}.FxCop|Any CPU.ActiveCfg = Release|Any CPU
+		{1FE6AD59-F0E8-4122-B369-E23AE566C26A}.FxCop|Any CPU.Build.0 = Release|Any CPU
+		{1FE6AD59-F0E8-4122-B369-E23AE566C26A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FE6AD59-F0E8-4122-B369-E23AE566C26A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1215,6 +1239,8 @@ Global
 		{D4E8F7C8-2DB2-4C50-A422-DA1DF1E3CC73} = {E9C9F120-07BA-4DFB-B9C3-3AFB9D44C9D5}
 		{1CC62F45-E6FF-43D5-84BF-509A1085D994} = {74E681ED-FECC-4034-B9BD-01B0BB1BDECA}
 		{FBC71540-A8E0-42DF-A666-423955376DB4} = {E9C9F120-07BA-4DFB-B9C3-3AFB9D44C9D5}
+		{A190C7B0-C46C-4B25-995C-D5ED354F041B} = {E9C9F120-07BA-4DFB-B9C3-3AFB9D44C9D5}
+		{1FE6AD59-F0E8-4122-B369-E23AE566C26A} = {E9C9F120-07BA-4DFB-B9C3-3AFB9D44C9D5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		EnterpriseLibraryConfigurationToolBinariesPath = packages\TransientFaultHandling.Core.5.1.1209.1\lib\NET4

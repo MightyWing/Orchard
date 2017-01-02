@@ -1,6 +1,7 @@
 ﻿using Mighty.Shop.Models;
 using Orchard.ContentManagement.Handlers;
 using Orchard.Data;
+using Orchard.Users.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,5 +15,6 @@ namespace Mighty.Shop.Handlers
         {
             Filters.Add(StorageFilter.For(repository));
         }
+      
     }
 }

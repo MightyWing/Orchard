@@ -42,7 +42,9 @@ namespace Mighty.Shop.Services
             _workContextAccessor = workContextAccessor;
             _contentManager = contentManager;
         }
+        public void AddRange(IEnumerable<ShoppingCartItem> items) {
 
+        }
         public void Add(int productId, int quantity = 1)
         {
             var item = Items.SingleOrDefault(x => x.ProductId == productId);
@@ -72,7 +74,26 @@ namespace Mighty.Shop.Services
         {
             return _contentManager.Get<ProductPart>(productId);
         }
+        public IEnumerable<ProductQuantity> GetProducts()
+        {
+            // Get a list of all product IDs from the shopping cart
+            var ids = Items.Select(x => x.ProductId).ToList();
 
+            // Load all product parts by the list of IDs
+            var productParts = _contentManager.GetMany<ProductPart>(ids, VersionOptions.Latest, QueryHints.Empty).ToArray();
+            var dd = productParts.ToList();
+            // Create a LINQ query that projects all items in the shoppingcart into shapes
+            var query = from item in Items
+                        from productPart in productParts
+                        where productPart.Id == item.ProductId
+                        select new ProductQuantity
+                        {
+                            ProductPart = productPart,
+                            Quantity = item.Quantity
+                        };
+            var aa = query.ToList();
+            return query;
+        }
         public void UpdateItems()
         {
             ItemsInternal.RemoveAll(x => x.Quantity == 0);
@@ -98,10 +119,11 @@ namespace Mighty.Shop.Services
             return Items.Sum(x => x.Quantity);
         }
 
-        private void Clear()
+        public void Clear()
         {
             ItemsInternal.Clear();
             UpdateItems();
         }
+ 
     }
 }

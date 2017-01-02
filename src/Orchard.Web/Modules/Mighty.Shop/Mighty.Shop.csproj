@@ -95,35 +95,81 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminMenu.cs" />
+    <Compile Include="Controllers\CheckoutController.cs" />
+    <Compile Include="Controllers\CustomerAdminController.cs" />
+    <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Controllers\ShoppingCartController.cs" />
+    <Compile Include="Controllers\SimulatedPaymentServiceProviderController.cs" />
+    <Compile Include="Drivers\AddressPartDriver.cs" />
+    <Compile Include="Drivers\CustomerDriver.cs" />
+    <Compile Include="Drivers\CustomerPartDriver.cs" />
     <Compile Include="Drivers\ProductPartDriver.cs" />
+    <Compile Include="Drivers\ShoppingCartWidgetPartDriver.cs" />
+    <Compile Include="Extensions\IPaymentServiceProvider.cs" />
+    <Compile Include="Extensions\PaymentRequest.cs" />
+    <Compile Include="Extensions\PaymentResponse.cs" />
+    <Compile Include="Extensions\PaymentResponseStatus.cs" />
     <Compile Include="Filters\ProductPartFilter.cs" />
+    <Compile Include="Handlers\AddressPartHandler.cs" />
+    <Compile Include="Handlers\CustomerPartHandler.cs" />
     <Compile Include="Handlers\ProductPartHandler.cs" />
+    <Compile Include="Helpers\StringExtensions.cs" />
     <Compile Include="Migrations.cs" />
+    <Compile Include="Models\AddressPart.cs" />
+    <Compile Include="Models\AddressPartRecord.cs" />
+    <Compile Include="Models\CustomerPart.cs" />
+    <Compile Include="Models\CustomerPartRecord.cs" />
+    <Compile Include="Models\OrderDetailRecord.cs" />
+    <Compile Include="Models\OrderRecord.cs" />
+    <Compile Include="Models\OrderStatus.cs" />
     <Compile Include="Models\ProductPartRecord.cs" />
+    <Compile Include="Models\ProductQuantity.cs" />
     <Compile Include="Models\ProductRecord.cs" />
     <Compile Include="Models\ShoppingCartItem.cs" />
+    <Compile Include="Models\ShoppingCartWidgetPart.cs" />
+    <Compile Include="Services\CustomerService.cs" />
+    <Compile Include="Services\DateTimeService.cs" />
+    <Compile Include="Services\ICustomerService.cs" />
+    <Compile Include="Services\IDateTimeService.cs" />
+    <Compile Include="Services\IOrderService.cs" />
+    <Compile Include="Services\OrderService.cs" />
+    <Compile Include="Services\SimulatedPaymentServiceProvider.cs" />
+    <Compile Include="ViewModels\AddressesViewModel.cs" />
+    <Compile Include="ViewModels\AddressViewModel.cs" />
+    <Compile Include="ViewModels\CustomersIndexVM.cs" />
+    <Compile Include="ViewModels\CustomersSearchVM.cs" />
+    <Compile Include="ViewModels\LoginViewModel.cs" />
+    <Compile Include="ViewModels\SignupViewModel.cs" />
+    <Compile Include="Models\UpdateShoppingCartItemViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\IManifestResourceProvider.cs" />
+    <Compile Include="ResourceManifest.cs" />
     <Compile Include="Services\IShoppingCart.cs" />
     <Compile Include="Services\ShoppingCartService.cs" />
+    <Compile Include="ViewModels\UpdateShoppingCartItemViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets.json" />
     <Content Include="Assets\Styles.less" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\images\sprites.png" />
+    <Content Include="Images\bullets.png" />
+    <Content Include="Images\sprites.png" />
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Images\Web.config" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\shoppingcart.js" />
+    <Content Include="Styles\checkout-summary.css" />
     <Content Include="Styles\common.css" />
+    <Content Include="Styles\menu.webshop-admin.css" />
     <Content Include="Styles\shoppingcart.css" />
+    <Content Include="Styles\shoppingcartwidget.css" />
     <Content Include="Styles\Styles.css" />
     <Content Include="Styles\Styles.min.css" />
     <Content Include="Web.config" />
@@ -131,8 +177,20 @@
     <Content Include="Styles\Web.config" />
     <Content Include="Module.txt" />
     <Content Include="Views\Parts\Product.AddButton.cshtml" />
-    <Content Include="Views\ShoppingCart.cshtml" />
-    <Content Include="Views\Parts\shoppingcart.cshtml" />
+    <Content Include="Views\shoppingcart.cshtml" />
+    <Content Include="Views\Parts\ShoppingCartWidget.cshtml" />
+    <Content Include="Views\EditorTemplates\Parts\Customer.cshtml" />
+    <Content Include="Views\EditorTemplates\Parts\Address.cshtml" />
+    <Content Include="Views\Checkout.SignupOrLogin.cshtml" />
+    <Content Include="Views\Checkout.Signup.cshtml" />
+    <Content Include="Views\Checkout.Login.cshtml" />
+    <Content Include="Views\Checkout.SelectAddress.cshtml" />
+    <Content Include="Views\Checkout.Summary.cshtml" />
+    <Content Include="Views\CustomerAdmin\Index.cshtml" />
+    <Content Include="Views\CustomerAdmin\Edit.cshtml" />
+    <Content Include="Views\Order.Created.cshtml" />
+    <Content Include="Views\SimulatedPaymentServiceProvider\Index.cshtml" />
+    <Content Include="Views\Order.PaymentResponse.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Orchard\Orchard.Framework.csproj">
@@ -149,9 +207,13 @@
       <Project>{5531e894-d259-45a3-aa61-26dbe720c1ce}</Project>
       <Name>Orchard.Projections</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Orchard.Users\Orchard.Users.csproj">
+      <Project>{79AED36E-ABD0-4747-93D3-8722B042454B}</Project>
+      <Name>Orchard.Users</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Views\ShoppingCart\" />
+    <Folder Include="Views\Order\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

@@ -1,0 +1,18 @@
+﻿@using Orchard.ContentManagement
+@using Orchard.Core.Title.Models
+@using Mighty.Shop.Models
+
+@{
+    Style.Require("Mighty.Shop.ShoppingCart");
+    var itemCount = (int)Model.ItemCount;
+    var totalAmount = (decimal)Model.TotalAmount;
+}
+<article>
+    <span class="label">Items:</span> <span class="value" data-bind="text: itemCount()">@itemCount</span><br />
+    <span class="label">Amount:</span> <span class="value" data-bind="text: calculateTotal()">@totalAmount.ToString("c")</span><br />
+    <div class="group">
+        <div class="align right">
+            <a href="@Url.Action("Index", "ShoppingCart", new { area = "Mighty.Shop" })">View shoppingcart</a>
+        </div>
+    </div>
+</article>

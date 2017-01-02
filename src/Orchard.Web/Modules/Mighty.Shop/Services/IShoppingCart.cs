@@ -11,12 +11,15 @@ namespace Mighty.Shop.Services
     {
         IEnumerable<ShoppingCartItem> Items { get; }
         void Add(int productId, int quantity = 1);
+        void AddRange(IEnumerable<ShoppingCartItem> items);
         void Remove(int productId);
         ProductPart GetProduct(int productId);
+        IEnumerable<ProductQuantity> GetProducts();
         decimal Subtotal();
         decimal Vat();
         decimal Total();
         int ItemCount();
         void UpdateItems();
+        void Clear();
     }
 }
