@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{E9C9F120-07BA-4DFB-B9C3-3AFB9D44C9D5}"
 EndProject
@@ -283,6 +283,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIM.LinqJs", "Orchard.Web\Modules\AIM.LinqJs\AIM.LinqJs.csproj", "{A190C7B0-C46C-4B25-995C-D5ED354F041B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orchard.Knockout", "Orchard.Web\Modules\Orchard.Knockout\Orchard.Knockout.csproj", "{1FE6AD59-F0E8-4122-B369-E23AE566C26A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mighty.Sms", "Orchard.Web\Modules\Mighty.Sms\Mighty.Sms.csproj", "{2EFA79B6-19DD-45A6-AC0D-2E43A9513297}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -1150,6 +1152,13 @@ Global
 		{1FE6AD59-F0E8-4122-B369-E23AE566C26A}.FxCop|Any CPU.Build.0 = Release|Any CPU
 		{1FE6AD59-F0E8-4122-B369-E23AE566C26A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1FE6AD59-F0E8-4122-B369-E23AE566C26A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EFA79B6-19DD-45A6-AC0D-2E43A9513297}.CodeCoverage|Any CPU.ActiveCfg = Release|Any CPU
+		{2EFA79B6-19DD-45A6-AC0D-2E43A9513297}.Coverage|Any CPU.ActiveCfg = Release|Any CPU
+		{2EFA79B6-19DD-45A6-AC0D-2E43A9513297}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EFA79B6-19DD-45A6-AC0D-2E43A9513297}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EFA79B6-19DD-45A6-AC0D-2E43A9513297}.FxCop|Any CPU.ActiveCfg = Release|Any CPU
+		{2EFA79B6-19DD-45A6-AC0D-2E43A9513297}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EFA79B6-19DD-45A6-AC0D-2E43A9513297}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1241,6 +1250,7 @@ Global
 		{FBC71540-A8E0-42DF-A666-423955376DB4} = {E9C9F120-07BA-4DFB-B9C3-3AFB9D44C9D5}
 		{A190C7B0-C46C-4B25-995C-D5ED354F041B} = {E9C9F120-07BA-4DFB-B9C3-3AFB9D44C9D5}
 		{1FE6AD59-F0E8-4122-B369-E23AE566C26A} = {E9C9F120-07BA-4DFB-B9C3-3AFB9D44C9D5}
+		{2EFA79B6-19DD-45A6-AC0D-2E43A9513297} = {E9C9F120-07BA-4DFB-B9C3-3AFB9D44C9D5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		EnterpriseLibraryConfigurationToolBinariesPath = packages\TransientFaultHandling.Core.5.1.1209.1\lib\NET4
